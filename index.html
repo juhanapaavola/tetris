@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=0 minimal-ui" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css">
+        <title>Tetris</title>
+        <script type="text/javascript" src="phaser.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="mainmenu.js"></script>
+        <script type="text/javascript" src="game.js"></script>
+
+        <script type="text/javascript">
+            window.onload = function(){
+                var game = new Phaser.Game(640, 480, Phaser.WEBGL, 'gamescreen');
+                game.state.add('MainMenu',Tetris.MainMenu);
+                game.state.add('Game',Tetris.Game);
+                game.state.start('MainMenu');
+
+            };
+        </script>
+
+
+    </head>
+    <body>
+        <div id="gamescreen"></div>
+    
+
+    </body>
+</html>
